@@ -1,0 +1,243 @@
+*, *::before, *::after {
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #404040;
+    margin: 0;
+    min-width: 320px;
+}
+
+/* =================
+    Typography 
+   ================= */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3), 0 0 25px #f39c12, 0 0 5px #e67e22;
+    color: #fff; /* White text for better contrast in the intro section */
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin: 0.167em 0;
+    color: #e67e22; /* Darker orange */
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.35;
+    color: #333; /* Darker gray text for better readability */
+}
+
+.beta-text { 
+    font-weight: 900;
+    color: #f39c12; /* Lighter orange for highlights */
+}
+
+.subheading {
+    color: #e67e22; /* Darker orange */
+    font-weight: 900;  
+    margin-bottom: 0.5em;
+}
+
+.beta-text,
+.top-text,
+.subheading {
+    text-transform: uppercase;
+}
+
+.top-text {
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid #e67e22; 
+    order: -1;
+    margin: 0 auto;
+    color: #e67e22; /* Dark orange */
+}
+
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #858585;
+}
+
+/* =================
+    Flex containers
+   ================= */
+
+.intro,
+.main-content {
+    display: flex;
+    flex-direction: column; 
+    padding-left: 2em;
+    padding-right: 2em;   
+}
+
+/* =================
+    Intro
+   ================= */
+
+.intro { 
+    justify-content: space-between;
+    min-height: 250px;
+    text-align: center;
+    color: #fff;
+    background: rgba(211, 84, 0, 0.8) url("images/intro-bg.png"); /* Darker orange background with opacity to improve contrast */
+    background-size: cover;
+    padding-bottom: 1.5em;
+}
+
+.beta-text {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 10px;
+    color: white; /* Light text for visibility */
+}
+
+.top-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+    font-style: italic;
+    color: #fff; /* White text color for contrast */
+}
+
+/* ====================
+    Main content
+   ==================== */
+   
+.main-content {
+    align-items: center;
+    padding-top: 2.5em;
+}
+
+.img-main {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.main-content p,
+form {
+    max-width: 450px;
+}
+
+/* =================
+    Form
+   ================= */
+
+input,
+button {
+    font-family: inherit;
+    width: 100%; 
+    border-radius: 5px;   
+}
+
+input {
+    padding: 0.5em;
+    margin-bottom: 0.75em;
+    border: 2px solid #e67e22; /* Lighter orange border */
+}
+
+input:focus {
+    outline: none;
+    border-color: #d35400; /* Darker orange for focus border */
+    background-color: #fef1d5; /* Light orange background on focus */
+}
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #e67e22; /* Bright orange */
+    margin-top: 1em;    
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #d35400; /* Darker orange on hover for better contrast */
+}
+
+/* =================
+    Footer Styling
+   ================= */
+footer {
+    width: 100%;
+    display: inline-block;
+    background-color: #e67e22; /* Medium orange background for footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 5px solid #d35400; /* Darker orange border for footer */
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    font-size: 1rem; /* Slightly larger text for better readability */
+}
+
+/* =================
+    Media queries 
+   ================= */
+
+@media (min-width: 720px) {
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 100vh;
+    }
+    footer {
+        width: 100%;
+        margin-top: none;
+        padding:20px 0 20px 0;
+        text-align: center;
+        font-size: 5rem;
+        border-top: 5px solid #d35400; 
+    }
+    footer p {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        color: white;
+    }
+    h1 {
+        font-size: 5vw;
+    }
+    
+    h2 {
+        font-size: 2.625rem;
+    }
+    
+    .beta-text {
+        font-size: 1.25rem;
+    }
+    
+    .intro,
+    .main-content {
+        width: 50%;
+        min-height: 90vh;
+    }
+    
+    .main-content {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 0;
+    }
+}
